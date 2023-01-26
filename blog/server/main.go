@@ -15,12 +15,10 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-var collection *mongo.Collection
 var addr string = "0.0.0.0:50051"
 
 func main() {
 	client, err := mongo.NewClient(options.Client().ApplyURI("mongodb://root:root@localhost:27017/"))
-
 	if err != nil {
 		log.Fatal(err)
 	}

@@ -20,6 +20,10 @@ func main() {
 	defer conn.Close()
 	c := pb.NewBlogServiceClient(conn)
 
-	log.printf("Blog id is %v", createBlog(c))
-
+	id := createBlog(c)
+	readBlog(c, id)
+	readBlog(c, "aNonExistingID")
+	updateBlog(c, id)
+	listBlog(c)
+	deleteBlog(c, id)
 }
