@@ -1,4 +1,4 @@
-module github.com/afdi11/grpc-excercise
+module github.com/afdi11/CRUD-Blog-with-MongoDB
 
 go 1.19
 
